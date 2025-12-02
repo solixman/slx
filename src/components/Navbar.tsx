@@ -1,14 +1,15 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Logo from "./Logo";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
 
 const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/#about" },
+  { name: "Skills", href: "/skills" },
+  { name: "Projects", href: "/projects" },
+  { name: "Contact", href: "/#contact" },
 ];
 
 const Navbar = () => {
@@ -23,9 +24,9 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto">
         <div className="glass rounded-2xl px-6 py-3 flex items-center justify-between">
-          <a href="#home">
+          <Link to="/">
             <Logo size={50} />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
@@ -42,13 +43,15 @@ const Navbar = () => {
               </motion.a>
             ))}
             <motion.a
-              href="#contact"
+              href="/resume.pdf"
+              download
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.8 }}
-              className="hero-button text-sm"
+              className="hero-button text-sm inline-flex items-center gap-2"
             >
-              Let's Talk
+              <Download size={16} />
+              Resume
             </motion.a>
           </div>
 

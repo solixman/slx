@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Logo from "./Logo";
-import { Github, Linkedin, Twitter, Heart } from "lucide-react";
+import { Github, Linkedin, Twitter, Heart, Download } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -17,23 +17,34 @@ const Footer = () => {
             </span>
           </div>
 
-          {/* Social links */}
-          <div className="flex items-center gap-4">
-            {[
-              { icon: Github, href: "#", label: "GitHub" },
-              { icon: Linkedin, href: "#", label: "LinkedIn" },
-              { icon: Twitter, href: "#", label: "Twitter" },
-            ].map(({ icon: Icon, href, label }) => (
-              <motion.a
-                key={label}
-                href={href}
-                whileHover={{ scale: 1.1, y: -2 }}
-                className="p-2 text-muted-foreground hover:text-primary transition-colors"
-                aria-label={label}
-              >
-                <Icon size={20} />
-              </motion.a>
-            ))}
+          {/* Download Resume & Social links */}
+          <div className="flex items-center gap-6">
+            <motion.a
+              href="/resume.pdf"
+              download
+              whileHover={{ scale: 1.05 }}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg glass text-primary text-sm font-medium hover:bg-primary/10 transition-colors"
+            >
+              <Download size={16} />
+              Download Resume
+            </motion.a>
+            <div className="flex items-center gap-4">
+              {[
+                { icon: Github, href: "#", label: "GitHub" },
+                { icon: Linkedin, href: "#", label: "LinkedIn" },
+                { icon: Twitter, href: "#", label: "Twitter" },
+              ].map(({ icon: Icon, href, label }) => (
+                <motion.a
+                  key={label}
+                  href={href}
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  className="p-2 text-muted-foreground hover:text-primary transition-colors"
+                  aria-label={label}
+                >
+                  <Icon size={20} />
+                </motion.a>
+              ))}
+            </div>
           </div>
         </div>
 
