@@ -1,46 +1,51 @@
-import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
+"use client"
 
-const words = ["Full-Stack Developer", "UI/UX Enthusiast", "Problem Solver", "Tech Innovator"];
+import { motion } from "framer-motion"
+import { useState, useEffect } from "react"
+
+const words = ["a Full-Stack Developer", "Soulayman JAAFAR ", "a Problem Solver", "a Tech Innovator"]
 
 const TypeWriter = () => {
-  const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [currentText, setCurrentText] = useState("");
-  const [isDeleting, setIsDeleting] = useState(false);
+  const [currentWordIndex, setCurrentWordIndex] = useState(0)
+  const [currentText, setCurrentText] = useState("")
+  const [isDeleting, setIsDeleting] = useState(false)
 
   useEffect(() => {
-    const currentWord = words[currentWordIndex];
-    
-    const timeout = setTimeout(() => {
-      if (!isDeleting) {
-        if (currentText.length < currentWord.length) {
-          setCurrentText(currentWord.slice(0, currentText.length + 1));
-        } else {
-          setTimeout(() => setIsDeleting(true), 2000);
-        }
-      } else {
-        if (currentText.length > 0) {
-          setCurrentText(currentText.slice(0, -1));
-        } else {
-          setIsDeleting(false);
-          setCurrentWordIndex((prev) => (prev + 1) % words.length);
-        }
-      }
-    }, isDeleting ? 50 : 100);
+    const currentWord = words[currentWordIndex]
 
-    return () => clearTimeout(timeout);
-  }, [currentText, isDeleting, currentWordIndex]);
+    const timeout = setTimeout(
+      () => {
+        if (!isDeleting) {
+          if (currentText.length < currentWord.length) {
+            setCurrentText(currentWord.slice(0, currentText.length + 1))
+          } else {
+            setTimeout(() => setIsDeleting(true), 2000)
+          }
+        } else {
+          if (currentText.length > 0) {
+            setCurrentText(currentText.slice(0, -1))
+          } else {
+            setIsDeleting(false)
+            setCurrentWordIndex((prev) => (prev + 1) % words.length)
+          }
+        }
+      },
+      isDeleting ? 50 : 100,
+    )
+
+    return () => clearTimeout(timeout)
+  }, [currentText, isDeleting, currentWordIndex])
 
   return (
-    <span className="text-gradient">
+    <span className="text-gradient inline-block min-w-max">
       {currentText}
       <motion.span
         animate={{ opacity: [1, 0] }}
-        transition={{ duration: 0.5, repeat: Infinity, repeatType: "reverse" }}
+        transition={{ duration: 0.5, repeat: Number.POSITIVE_INFINITY, repeatType: "reverse" }}
         className="inline-block w-[3px] h-[1em] bg-primary ml-1 align-middle"
       />
     </span>
-  );
-};
+  )
+}
 
-export default TypeWriter;
+export default TypeWriter

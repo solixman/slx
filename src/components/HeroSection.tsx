@@ -1,9 +1,12 @@
-import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Twitter, Download } from "lucide-react";
-import TypeWriter from "./TypeWriter";
+"use client"
+
+import { motion } from "framer-motion"
+import { ArrowDown, Github, Linkedin, Twitter } from "lucide-react"
+import TypeWriter from "./TypeWriter"
 import profileImage from "@/assets/profile.jpg";
 
 const HeroSection = () => {
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
       {/* Abstract background gradient */}
@@ -27,7 +30,7 @@ const HeroSection = () => {
             }}
             transition={{
               duration: 3 + i * 0.5,
-              repeat: Infinity,
+              repeat: Number.POSITIVE_INFINITY,
               ease: "linear",
               delay: i * 0.2,
             }}
@@ -41,33 +44,18 @@ const HeroSection = () => {
             {/* Text Content */}
             <div className="text-center lg:text-left order-2 lg:order-1">
               {/* Download Resume - Top */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="mb-6"
-              >
-                <a
-                  href="/resume.pdf"
-                  download
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-primary text-sm font-medium hover:bg-primary/10 transition-colors"
-                >
-                  <Download size={16} />
-                  Download Resume
-                </a>
-              </motion.div>
 
               {/* Main Title */}
-              <motion.h1
+              <motion.h2
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="section-title mb-6"
+                className="section-title mb-6 min-h-[7rem]"
               >
-                I'm a <TypeWriter />
+                I'm <TypeWriter />
                 <br />
                 Building Digital Experiences
-              </motion.h1>
+              </motion.h2>
 
               {/* Subtitle */}
               <motion.p
@@ -76,8 +64,8 @@ const HeroSection = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto lg:mx-0 mb-10"
               >
-                I craft modern, scalable web applications with cutting-edge technologies.
-                Transforming ideas into elegant, functional solutions.
+                I craft modern, scalable web applications with cutting-edge technologies. Transforming ideas into
+                elegant, functional solutions.
               </motion.p>
 
               {/* CTA Buttons */}
@@ -94,31 +82,6 @@ const HeroSection = () => {
                   Get In Touch
                 </a>
               </motion.div>
-
-              {/* Social Links */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="flex justify-center lg:justify-start gap-6"
-              >
-                {[
-                  { icon: Github, href: "#", label: "GitHub" },
-                  { icon: Linkedin, href: "#", label: "LinkedIn" },
-                  { icon: Twitter, href: "#", label: "Twitter" },
-                ].map(({ icon: Icon, href, label }) => (
-                  <motion.a
-                    key={label}
-                    href={href}
-                    whileHover={{ scale: 1.1, y: -2 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="p-3 rounded-xl glass text-muted-foreground hover:text-primary transition-colors"
-                    aria-label={label}
-                  >
-                    <Icon size={24} />
-                  </motion.a>
-                ))}
-              </motion.div>
             </div>
 
             {/* Profile Image */}
@@ -131,13 +94,13 @@ const HeroSection = () => {
               <div className="relative">
                 {/* Glow effect behind image */}
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/50 to-accent/50 blur-3xl opacity-60" />
-                
+
                 {/* Image container */}
                 <motion.div
                   whileHover={{ scale: 1.02 }}
                   className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl"
                 >
-                  <img
+                <img
                     src={profileImage}
                     alt="SLX - Full Stack Developer"
                     className="w-full h-full object-cover object-top"
@@ -149,50 +112,60 @@ const HeroSection = () => {
                 <motion.div
                   className="absolute -inset-4 border-2 border-primary/20 rounded-full"
                   animate={{ rotate: 360 }}
-                  transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+                  transition={{ duration: 30, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
                 />
                 <motion.div
                   className="absolute -inset-8 border border-accent/10 rounded-full"
                   animate={{ rotate: -360 }}
-                  transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+                  transition={{ duration: 40, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
                 />
               </div>
             </motion.div>
           </div>
+
+          {/* Social Links - Centered on Full Page */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="flex justify-center gap-6 mt-12"
+          >
+            {[
+              { icon: Github, href: "https://github.com/solixman", label: "GitHub" },
+              { icon: Linkedin, href: "https://www.linkedin.com/in/solixman", label: "LinkedIn" },
+              { icon: Twitter, href: "#", label: "Twitter" },
+            ].map(({ icon: Icon, href, label }) => (
+              <motion.a
+                key={label}
+                href={href}
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                className="p-3 rounded-xl glass text-muted-foreground hover:text-primary transition-colors"
+                aria-label={label}
+              >
+                <Icon size={24} />
+              </motion.a>
+            ))}
+          </motion.div>
         </div>
       </div>
 
       {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2"
-      >
-        <motion.a
-          href="#about"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="flex flex-col items-center text-muted-foreground hover:text-primary transition-colors"
-        >
-          <span className="text-sm mb-2">Scroll Down</span>
-          <ArrowDown size={20} />
-        </motion.a>
-      </motion.div>
+      
 
       {/* Floating decorative elements */}
       <motion.div
         className="absolute top-1/4 left-10 w-20 h-20 border border-primary/30 rounded-lg"
         animate={{ rotate: 360 }}
-        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        transition={{ duration: 20, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
       />
       <motion.div
         className="absolute bottom-1/4 right-10 w-16 h-16 border border-accent/30 rounded-full"
         animate={{ scale: [1, 1.2, 1] }}
-        transition={{ duration: 4, repeat: Infinity }}
+        transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY }}
       />
     </section>
-  );
-};
+  )
+}
 
-export default HeroSection;
+export default HeroSection
