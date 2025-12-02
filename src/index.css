@@ -4,6 +4,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
 
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+
 @layer base {
   :root {
     --background: 230 25% 5%;
@@ -15,10 +17,10 @@
     --popover: 230 20% 8%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 187 100% 50%;
+    --primary: 272 71.6667% 47.0588%;
     --primary-foreground: 230 25% 5%;
 
-    --secondary: 270 60% 60%;
+    --secondary: 243 75.3555% 58.6275%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 230 15% 15%;
