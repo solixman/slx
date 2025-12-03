@@ -56,11 +56,11 @@ const AboutSection = () => {
                 >
                   <p className="text-muted-foreground">
                     <span className="text-accent">const</span>{" "}
-                    <span className="text-primary">developer</span> = {"{"}
+                    <span className="text-primary">Me</span> = {"{"}
                   </p>
                   <p className="pl-4 text-muted-foreground">
                     <span className="text-green-400">name</span>:{" "}
-                    <span className="text-yellow-300">"SLX"</span>,
+                    <span className="text-yellow-300">"Soulayman Jaafar"</span>,
                   </p>
                   <p className="pl-4 text-muted-foreground">
                     <span className="text-green-400">role</span>:{" "}
@@ -68,7 +68,7 @@ const AboutSection = () => {
                   </p>
                   <p className="pl-4 text-muted-foreground">
                     <span className="text-green-400">passion</span>:{" "}
-                    <span className="text-yellow-300">"Building amazing things"</span>,
+                    <span className="text-yellow-300">"Infinit"</span>,
                   </p>
                   <p className="pl-4 text-muted-foreground">
                     <span className="text-green-400">coffee</span>:{" "}
@@ -98,22 +98,26 @@ const AboutSection = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <span className="text-primary font-medium mb-4 block">About Me</span>
-            <h2 className="section-title text-3xl md:text-4xl mb-6">
-              Passionate Developer,
-              <br />
-              <span className="text-gradient">Creative Problem Solver</span>
-            </h2>
-            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              With years of experience in full-stack development, I specialize in 
-              building robust, scalable web applications. I love turning complex 
-              problems into simple, beautiful solutions that users love.
-            </p>
-            <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
-              When I'm not coding, you'll find me exploring new technologies, 
-              contributing to open-source projects, or sharing knowledge with 
-              the developer community.
-            </p>
+           <span className="text-primary font-medium mb-4 block">About Me</span>
+<h2 className="section-title text-3xl md:text-4xl mb-6">
+  Full-Stack Developer, <br />
+  <span className="text-gradient">Focused on Impact & Innovation</span>
+</h2>
+<p className="text-muted-foreground text-lg mb-8 leading-relaxed">
+  I’m a developer passionate about building smart, efficient, and modern web applications.
+  From clean UI design to powerful backend logic, I enjoy creating products that not only
+  work flawlessly but also feel great to use.
+</p>
+<p className="text-muted-foreground text-lg mb-10 leading-relaxed">
+  My experience spans across Laravel, React, and PostgreSQL—crafting everything from 
+  admin panels and e-commerce systems to custom dashboards. I’m always exploring
+  new technologies and pushing myself to write cleaner, faster, and more scalable code.
+</p>
+<p className="text-muted-foreground text-lg mb-10 leading-relaxed">
+  Beyond development, I’m driven by curiosity—constantly learning, experimenting, 
+  and finding better ways to solve real-world problems through code.
+</p>
+
 
             {/* Highlights grid */}
             <div className="grid sm:grid-cols-2 gap-4">
