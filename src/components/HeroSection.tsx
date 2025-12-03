@@ -8,7 +8,7 @@ import profileImage from "@/assets/profile.jpg";
 const HeroSection = () => {
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
       {/* Abstract background gradient */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-accent/10" />
@@ -123,47 +123,36 @@ const HeroSection = () => {
             </motion.div>
           </div>
 
-          {/* Social Links - Centered on Full Page */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex justify-center gap-6 mt-12"
-          >
-            {[
-              { icon: Github, href: "https://github.com/solixman", label: "GitHub" },
-              { icon: Linkedin, href: "https://www.linkedin.com/in/solixman", label: "LinkedIn" },
-              { icon: Twitter, href: "#", label: "Twitter" },
-            ].map(({ icon: Icon, href, label }) => (
-              <motion.a
-                key={label}
-                href={href}
-                whileHover={{ scale: 1.1, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-                className="p-3 rounded-xl glass text-muted-foreground hover:text-primary transition-colors"
-                aria-label={label}
-              >
-                <Icon size={24} />
-              </motion.a>
-            ))}
-          </motion.div>
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      
-
-      {/* Floating decorative elements */}
+      {/* Social Links - Fixed Left Side */}
       <motion.div
-        className="absolute top-1/4 left-10 w-20 h-20 border border-primary/30 rounded-lg"
-        animate={{ rotate: 360 }}
-        transition={{ duration: 20, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
-      />
-      <motion.div
-        className="absolute bottom-1/4 right-10 w-16 h-16 border border-accent/30 rounded-full"
-        animate={{ scale: [1, 1.2, 1] }}
-        transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY }}
-      />
+        initial={{ opacity: 0, x: -30 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        className="fixed left-6 top-1/2 -translate-y-1/2 hidden lg:flex flex-col gap-4 z-50"
+      >
+        {[
+          { icon: Github, href: "https://github.com/solixman", label: "GitHub" },
+          { icon: Linkedin, href: "https://www.linkedin.com/in/solixman", label: "LinkedIn" },
+          { icon: Twitter, href: "#", label: "Twitter" },
+        ].map(({ icon: Icon, href, label }) => (
+          <motion.a
+            key={label}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.1, x: 4 }}
+            whileTap={{ scale: 0.95 }}
+            className="p-3 rounded-xl glass text-muted-foreground hover:text-primary transition-colors"
+            aria-label={label}
+          >
+            <Icon size={20} />
+          </motion.a>
+        ))}
+        <div className="w-px h-20 bg-gradient-to-b from-primary/50 to-transparent mx-auto mt-2" />
+      </motion.div>
     </section>
   )
 }
