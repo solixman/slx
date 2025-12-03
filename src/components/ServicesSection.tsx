@@ -12,7 +12,7 @@ const services = [
   },
   {
     icon: Smartphone,
-    title: "Mobile-First Design",
+    title: "All platforms Support",
     description: "Creating seamless experiences across all devices with progressive web app capabilities.",
     gradient: "from-purple-500 to-pink-500",
   },

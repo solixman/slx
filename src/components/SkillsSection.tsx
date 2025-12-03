@@ -4,25 +4,26 @@ import { useRef } from "react";
 
 const skills = {
   frontend: [
-    { name: "React", level: 95 },
+    { name: "React", level: 75 },
+    { name: "Blade", level: 80 },
     { name: "TypeScript", level: 90 },
-    { name: "Next.js", level: 88 },
     { name: "Tailwind CSS", level: 95 },
     { name: "Vue.js", level: 75 },
   ],
   backend: [
     { name: "Node.js", level: 92 },
-    { name: "Python", level: 85 },
+    { name: "Laravel", level: 85 },
+    { name: "GraphQL", level: 88 },
     { name: "PostgreSQL", level: 88 },
-    { name: "MongoDB", level: 82 },
-    { name: "GraphQL", level: 78 },
+    { name: "MongoDB", level: 76 },
   ],
   tools: [
     { name: "Git", level: 95 },
-    { name: "Docker", level: 85 },
-    { name: "AWS", level: 80 },
-    { name: "CI/CD", level: 82 },
-    { name: "Figma", level: 75 },
+    { name: "UML", level: 93 },
+    { name: "Jira", level: 83 },
+    { name: "AWS", level: 75 },
+    { name: "CI/CD", level: 70 },
+    { name: "Docker", level: 60 },
   ],
 };
 
@@ -114,8 +115,8 @@ const SkillsSection = () => {
           transition={{ delay: 0.8 }}
           className="mt-16 text-center"
         >
-          <p className="text-muted-foreground mb-6">And many more...</p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <a href="/skills" className="text-muted-foreground ">See Full Skills Report</a>
+          <div className="flex flex-wrap justify-center gap-4 mt-5 ">
             {["Redux", "Jest", "Prisma", "Redis", "Kubernetes", "Vite", "Sass", "Firebase"].map(
               (tech, i) => (
                 <motion.span

@@ -109,11 +109,6 @@ const AboutSection = () => {
   work flawlessly but also feel great to use.
 </p>
 <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
-  My experience spans across Laravel, React, and PostgreSQL—crafting everything from 
-  admin panels and e-commerce systems to custom dashboards. I’m always exploring
-  new technologies and pushing myself to write cleaner, faster, and more scalable code.
-</p>
-<p className="text-muted-foreground text-lg mb-10 leading-relaxed">
   Beyond development, I’m driven by curiosity—constantly learning, experimenting, 
   and finding better ways to solve real-world problems through code.
 </p>
