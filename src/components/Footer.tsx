@@ -48,10 +48,9 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Copyright */}
         <div className="mt-8 pt-8 border-t border-border/30 text-center">
           <p className="text-muted-foreground text-sm flex items-center justify-center gap-1">
-            © {currentYear} SLX. Made with <Heart size={14} className="text-destructive" /> and lots of coffee
+            © {currentYear} SLX. Made By Soulayman Jaafar AKA "Solixman"using new technologies and some tea
           </p>
         </div>
       </div>

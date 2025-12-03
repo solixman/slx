@@ -1,14 +1,14 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowDown, Github, Linkedin, Twitter } from "lucide-react"
+import {  Github, Linkedin, Twitter } from "lucide-react"
 import TypeWriter from "./TypeWriter"
 import profileImage from "@/assets/profile.jpg";
 
 const HeroSection = () => {
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Abstract background gradient */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-accent/10" />
@@ -54,7 +54,7 @@ const HeroSection = () => {
               >
                 I'm <TypeWriter />
                 <br />
-                Building Digital Experiences
+                Building Digital Solutions
               </motion.h2>
 
               {/* Subtitle */}
@@ -64,7 +64,7 @@ const HeroSection = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto lg:mx-0 mb-10"
               >
-                I craft modern, scalable web applications with cutting-edge technologies. Transforming ideas into
+                I craft modern, scalable web applications with cutting-edge technologies. Transforming ideas&problems into
                 elegant, functional solutions.
               </motion.p>
 
