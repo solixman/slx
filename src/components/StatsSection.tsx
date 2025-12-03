@@ -2,10 +2,10 @@ import { motion, useInView, useMotionValue, useSpring, useTransform } from "fram
 import { useRef, useEffect } from "react";
 
 const stats = [
-  { value: 50, suffix: "+", label: "Projects Completed" },
-  { value: 5, suffix: "+", label: "Years Experience" },
-  { value: 30, suffix: "+", label: "Happy Clients" },
-  { value: 99, suffix: "%", label: "Client Satisfaction" },
+  { value: 20, suffix: "+", label: "Projects Completed" },
+  { value: 2, suffix: "+", label: "Years Experience" },
+  { value: 650, suffix: "+", label: "Total Contributions this year" },
+  { value: 1, suffix: "", label: "Goal" },
 ];
 
 const Counter = ({ value, suffix }: { value: number; suffix: string }) => {
