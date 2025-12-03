@@ -11,16 +11,13 @@ const skillsData = {
   frontend: {
     title: "Frontend Development",
     icon: "🎨",
-    description: "Building responsive, accessible, and performant user interfaces",
+    description: "Building responsive, interactive, and user-friendly interfaces",
     skills: [
-      { name: "React / React Native", level: 95, years: 5, projects: 40 },
-      { name: "TypeScript", level: 92, years: 4, projects: 35 },
-      { name: "Next.js", level: 90, years: 3, projects: 20 },
-      { name: "Tailwind CSS", level: 95, years: 4, projects: 45 },
-      { name: "Vue.js", level: 78, years: 2, projects: 8 },
-      { name: "SCSS/SASS", level: 85, years: 5, projects: 30 },
-      { name: "Framer Motion", level: 88, years: 3, projects: 25 },
-      { name: "Redux / Zustand", level: 90, years: 4, projects: 28 },
+      { name: "HTML, CSS, JavaScript", level: 95, years: 4, projects: 30 },
+      { name: "React", level: 88, years: 3, projects: 20 },
+      { name: "TypeScript", level: 80, years: 2, projects: 15 },
+      { name: "UI Libraries (ShadCN/UI)", level: 85, years: 2, projects: 18 },
+      { name: "Tailwind CSS", level: 90, years: 2, projects: 20 },
     ],
   },
   backend: {
@@ -28,29 +25,29 @@ const skillsData = {
     icon: "⚙️",
     description: "Designing scalable APIs and robust server-side solutions",
     skills: [
-      { name: "Node.js / Express", level: 92, years: 5, projects: 38 },
-      { name: "Python / Django", level: 85, years: 3, projects: 15 },
-      { name: "PostgreSQL", level: 90, years: 4, projects: 30 },
-      { name: "MongoDB", level: 85, years: 4, projects: 25 },
-      { name: "GraphQL", level: 82, years: 3, projects: 18 },
-      { name: "REST API Design", level: 95, years: 5, projects: 50 },
-      { name: "Redis", level: 78, years: 2, projects: 12 },
-      { name: "Prisma / Drizzle", level: 85, years: 2, projects: 15 },
+      { name: "PHP & Laravel", level: 90, years: 3, projects: 25 },
+      { name: "Node.js / Express", level: 88, years: 3, projects: 20 },
+      { name: "Eloquent / Mongoose ORM", level: 88, years: 3, projects: 22 },
+      { name: "REST APIs & MVC", level: 90, years: 3, projects: 25 },
+    ],
+  },
+  databases: {
+    title: "Databases",
+    icon: "🗄️",
+    description: "Designing and managing relational and NoSQL databases",
+    skills: [
+      { name: "PostgreSQL / MySQL", level: 85, years: 3, projects: 20 },
+      { name: "MongoDB", level: 85, years: 2, projects: 15 },
     ],
   },
   devops: {
-    title: "DevOps & Cloud",
+    title: "DevOps & Deployment",
     icon: "☁️",
-    description: "Deploying and maintaining cloud infrastructure at scale",
+    description: "Deploying and managing cloud infrastructure",
     skills: [
-      { name: "Docker", level: 88, years: 4, projects: 35 },
-      { name: "AWS (EC2, S3, Lambda)", level: 82, years: 3, projects: 20 },
-      { name: "CI/CD (GitHub Actions)", level: 85, years: 4, projects: 40 },
-      { name: "Kubernetes", level: 70, years: 2, projects: 8 },
-      { name: "Vercel / Netlify", level: 92, years: 4, projects: 45 },
-      { name: "Linux / Shell", level: 80, years: 5, projects: 50 },
-      { name: "Nginx", level: 75, years: 3, projects: 15 },
-      { name: "Terraform", level: 65, years: 1, projects: 5 },
+      { name: "AWS (S3, EC2, VPC)", level: 70, years: 1, projects: 8 },
+      { name: "Vercel", level: 88, years: 2, projects: 15 },
+      { name: "Docker", level: 55, years: 1, projects: 5 },
     ],
   },
   tools: {
@@ -58,23 +55,26 @@ const skillsData = {
     icon: "🛠️",
     description: "Professional development tools and best practices",
     skills: [
-      { name: "Git / GitHub", level: 95, years: 6, projects: 100 },
-      { name: "Figma", level: 80, years: 3, projects: 30 },
-      { name: "Jest / Testing Library", level: 85, years: 4, projects: 35 },
-      { name: "Agile / Scrum", level: 90, years: 5, projects: 50 },
-      { name: "VS Code / Vim", level: 95, years: 6, projects: 100 },
-      { name: "Postman / Insomnia", level: 90, years: 5, projects: 45 },
-      { name: "Webpack / Vite", level: 85, years: 4, projects: 40 },
-      { name: "Storybook", level: 78, years: 2, projects: 15 },
+      { name: "Git / GitHub", level: 90, years: 4, projects: 30 },
+      { name: "Problem-solving & Debugging", level: 95, years: 4, projects: 30 },
+      { name: "AI-Driven Development", level: 80, years: 1, projects: 10 },
+    ],
+  },
+  learning: {
+    title: "Currently Learning",
+    icon: "📚",
+    description: "Technologies I'm actively improving and exploring",
+    skills: [
+      { name: "Next.js", level: 50, years: 0, projects: 2 },
+      { name: "Advanced TypeScript", level: 60, years: 1, projects: 5 },
+      { name: "Docker & CI/CD", level: 45, years: 0, projects: 3 },
+      { name: "AI Tools & Integration", level: 55, years: 0, projects: 4 },
     ],
   },
 };
 
 const certifications = [
-  { name: "AWS Certified Developer", issuer: "Amazon Web Services", year: 2023 },
-  { name: "Meta Front-End Developer", issuer: "Meta (Coursera)", year: 2022 },
-  { name: "Google Cloud Professional", issuer: "Google Cloud", year: 2023 },
-  { name: "MongoDB Developer Associate", issuer: "MongoDB University", year: 2022 },
+  { name: "EF SET English Certificate (C2 Proficient)", issuer: "EF Education First", year: 2024, link: "https://cert.efset.org/en/MLz1mP" },
 ];
 
 const SkillBar = ({ skill, index }: { skill: { name: string; level: number; years: number; projects: number }; index: number }) => {
@@ -145,8 +145,8 @@ const SkillCategory = ({ category, data, index }: { category: string; data: type
 };
 
 const SkillsReport = () => {
-  const totalYears = 6;
-  const totalProjects = 50;
+  const totalYears = 4;
+  const totalProjects = 30;
   const totalTechnologies = Object.values(skillsData).reduce((acc, cat) => acc + cat.skills.length, 0);
 
   return (
@@ -219,26 +219,30 @@ const SkillsReport = () => {
               <Award size={32} className="text-primary" />
               <h2 className="text-2xl font-bold text-foreground">Certifications</h2>
             </div>
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-1 gap-4">
               {certifications.map((cert, index) => (
-                <motion.div
+                <motion.a
                   key={cert.name}
+                  href={cert.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   initial={{ opacity: 0, scale: 0.95 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="card-glass flex items-center gap-4"
+                  className="card-glass flex items-center gap-4 hover:border-primary/50 transition-colors group"
                 >
                   <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center">
                     <BookOpen size={24} className="text-primary" />
                   </div>
-                  <div>
-                    <h3 className="font-medium text-foreground">{cert.name}</h3>
+                  <div className="flex-1">
+                    <h3 className="font-medium text-foreground group-hover:text-primary transition-colors">{cert.name}</h3>
                     <p className="text-sm text-muted-foreground">
                       {cert.issuer} • {cert.year}
                     </p>
                   </div>
-                </motion.div>
+                  <span className="text-primary opacity-0 group-hover:opacity-100 transition-opacity">View Certificate →</span>
+                </motion.a>
               ))}
             </div>
           </motion.section>

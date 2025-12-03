@@ -4,26 +4,22 @@ import { useRef } from "react";
 
 const skills = {
   frontend: [
-    { name: "React", level: 75 },
-    { name: "Blade", level: 80 },
-    { name: "TypeScript", level: 90 },
-    { name: "Tailwind CSS", level: 95 },
-    { name: "Vue.js", level: 75 },
+    { name: "HTML/CSS/JS", level: 95 },
+    { name: "React", level: 88 },
+    { name: "TypeScript", level: 80 },
+    { name: "UI Libraries (ShadCN)", level: 85 },
   ],
   backend: [
-    { name: "Node.js", level: 92 },
-    { name: "Laravel", level: 85 },
-    { name: "GraphQL", level: 88 },
-    { name: "PostgreSQL", level: 88 },
-    { name: "MongoDB", level: 76 },
+    { name: "PHP & Laravel", level: 90 },
+    { name: "Node.js / Express", level: 88 },
+    { name: "PostgreSQL / MySQL", level: 85 },
+    { name: "MongoDB", level: 85 },
   ],
   tools: [
-    { name: "Git", level: 95 },
-    { name: "UML", level: 93 },
-    { name: "Jira", level: 83 },
-    { name: "AWS", level: 75 },
-    { name: "CI/CD", level: 70 },
-    { name: "Docker", level: 60 },
+    { name: "Git / GitHub", level: 90 },
+    { name: "REST APIs & MVC", level: 90 },
+    { name: "AWS (S3, EC2)", level: 70 },
+    { name: "Docker", level: 55 },
   ],
 };
 
@@ -117,7 +113,7 @@ const SkillsSection = () => {
         >
           <a href="/skills" className="text-muted-foreground ">See Full Skills Report</a>
           <div className="flex flex-wrap justify-center gap-4 mt-5 ">
-            {["Redux", "Jest", "Prisma", "Redis", "Kubernetes", "Vite", "Sass", "Firebase"].map(
+            {["Next.js", "Vercel", "Eloquent", "Mongoose", "CI/CD", "AI Tools", "NestJS"].map(
               (tech, i) => (
                 <motion.span
                   key={tech}
