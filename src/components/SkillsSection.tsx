@@ -26,13 +26,15 @@ const skills = {
     { name: "Docker", level: 55 },
   ],
   softSkills: [
-    { name: "Team Collaboration", level: 95 },
-    { name: "Leadership & Influence", level: 85 },
-    { name: "Problem-Solving Mindset", level: 95 },
-    { name: "Communication", level: 85 },
-    { name: "Time & Task Management", level: 85 },
-    { name: "Professionalism & Reliability", level: 95 },
-    { name: "Adaptability & Learning", level: 95 },
+    { name: "Fast Learning and understanding", level: 95},
+      { name: "Problem-Solving Mindset", level: 95},
+      { name: "Team Collaboration", level: 95},
+      { name: "Leadership & Influence", level: 85},
+      { name: "Interpersonal skills", level: 85},
+      { name: "Time & Task Management", level: 85},
+      { name: "Professionalism & Reliability", level: 95},
+      { name: "Adaptability & Continuous Learning", level: 95},
+      { name: "Stress management", level: 85},
   ],
 };
 
