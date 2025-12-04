@@ -5,9 +5,9 @@ import { Mail, MapPin, Phone, Send, Loader2 } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 
 const contactInfo = [
-  { icon: Mail, label: "Email", value: "hello@slx.dev", href: "mailto:hello@slx.dev" },
-  { icon: Phone, label: "Phone", value: "+1 (555) 123-4567", href: "tel:+15551234567" },
-  { icon: MapPin, label: "Location", value: "San Francisco, CA", href: "#" },
+  { icon: Mail, label: "Email", value: "soulayman.jaafar@example.com", href: "mailto:soulayman.jaafar@example.com" },
+  { icon: Phone, label: "Phone", value: "+212 XXX-XXXXXX", href: "tel:+212XXXXXXXXX" },
+  { icon: MapPin, label: "Location", value: "Morocco", href: "https://maps.google.com/?q=Morocco" },
 ];
 
 const ContactSection = () => {
@@ -77,6 +77,8 @@ const ContactSection = () => {
                 <motion.a
                   key={item.label}
                   href={item.href}
+                  target={item.label === "Location" ? "_blank" : undefined}
+                  rel={item.label === "Location" ? "noopener noreferrer" : undefined}
                   initial={{ opacity: 0, x: -20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ delay: 0.3 + index * 0.1 }}
