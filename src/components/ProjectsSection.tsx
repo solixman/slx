@@ -6,41 +6,43 @@ import { ExternalLink, Github, ArrowRight } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "A full-featured e-commerce platform with real-time inventory, payment processing, and admin dashboard.",
-    tags: ["React", "Node.js", "PostgreSQL", "Stripe"],
+    title: "ResQSX",
+    description: "A smart ambulance dispatching platform that allows emergency operators to manage incidents, track ambulances in real time, and make fast, data-driven decisions through an interactive map interface.",
+    tags: ["TypeScript", "React", "JSON Server", "ChadCN/UI", "UML", "Jira"],
     image: "gradient-1",
-    github: "#",
+    github: "https://github.com/solixman/resQSX",
     live: "#",
   },
   {
     id: 2,
-    title: "AI Chat Application",
-    description: "Real-time chat application powered by AI with smart responses and conversation memory.",
-    tags: ["Next.js", "OpenAI", "WebSocket", "Redis"],
-    image: "gradient-2",
-    github: "#",
+    title: "CareFlow",
+    description: "A clinic management web app that helps doctors, patients, and administrators streamline appointments, schedules, and patient records with a clean, efficient interface. I had to find a solution to automatic appointments conflicts I'll be happy to discuss how I did it if you'd like to contact me. ",
+    tags: ["Express", "Node.js", "TypeScript", "React", "ChadCN/UI", "UML", "Jira"],
+    image: "gradient-3",
+    github: "https://github.com/solixman/careFlow",
     live: "#",
   },
   {
     id: 3,
-    title: "Project Management Tool",
-    description: "Collaborative project management with Kanban boards, time tracking, and team analytics.",
-    tags: ["Vue.js", "GraphQL", "MongoDB", "Docker"],
-    image: "gradient-3",
-    github: "#",
+    title: "TicTacToe",
+    description: "A customizable and responsive Tic Tac Toe game that lets users define grid size and winning conditions, offering a fresh and challenging twist to the classic game. Note that this project was to show my logical thinking not my design skills as it was with a very limited time",
+    tags: ["JavaScript (Vanilla)"],
+    image: "gradient-2",
+    github: "https://github.com/solixman/tictactoe",
     live: "#",
   },
+
   {
     id: 4,
-    title: "Social Media Dashboard",
-    description: "Analytics dashboard for social media management with scheduling and performance insights.",
-    tags: ["React", "D3.js", "Python", "AWS"],
+    title: "Borne-de-Commande",
+    description: "A self-ordering terminal interface built with Flutter, enabling users to browse menus, customize orders, and make seamless purchases in-store.",
+    tags: ["AI-driven Development","During internship", "Flutter"],
     image: "gradient-4",
-    github: "#",
+    github: "https://github.com/solixman/Borne_de_comande",
     live: "#",
   },
 ];
+
 
 const gradients = {
   "gradient-1": "linear-gradient(135deg, hsl(187 100% 50% / 0.3) 0%, hsl(270 60% 60% / 0.3) 100%)",
@@ -106,15 +108,7 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
           >
             <Github size={24} />
           </motion.a>
-          <motion.a
-            href={project.live}
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: isHovered ? 1 : 0.8, opacity: isHovered ? 1 : 0 }}
-            transition={{ delay: 0.2 }}
-            className="p-3 glass rounded-xl text-foreground hover:text-primary transition-colors"
-          >
-            <ExternalLink size={24} />
-          </motion.a>
+          
         </motion.div>
       </div>
 
@@ -177,7 +171,7 @@ const ProjectsSection = () => {
           className="text-center mt-12"
         >
           <motion.a
-            href="#"
+            href="/projects"
             whileHover={{ x: 5 }}
             className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
           >

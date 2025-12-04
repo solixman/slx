@@ -34,23 +34,7 @@ const skillsData = {
     ],
     notes: "Backend development is where I'm most confident. I enjoy designing clean, scalable architectures and implementing efficient logic that keeps applications reliable and fast. I've built complete systems, found smart solutinos to real problems and optimized applications, using php&laravel and now focused on Node.js, managing everything from authentication and APIs to performance optimization and database structure. I focus on writing maintainable, well-documented code that supports long-term growth. briefly it just makes me happy working on backend",
   },
-  softSkills: {
-    title: "Soft Skills",
-    icon: "🤝",
-    description: "Interpersonal and professional skills that drive collaboration and success",
-    skills: [
-      { name: "Fast Learning and understanding", level: 95, years: 2, projects: "more than just" },
-      { name: "Problem-Solving Mindset", level: 95, years: 2, projects: "more than just" },
-      { name: "Team Collaboration", level: 95, years: 2, projects: "+10" },
-      { name: "Leadership & Influence", level: 85, years: 2, projects: "more than just" },
-      { name: "Interpersonal skills", level: 85, years: 2, projects: "more than just" },
-      { name: "Time & Task Management", level: 85, years: 2, projects: "more than just" },
-      { name: "Professionalism & Reliability", level: 95, years: 2, projects: "more than just" },
-      { name: "Adaptability & Continuous Learning", level: 95, years: 2, projects: "more than just" },
-      { name: "Stress management", level: 85, years: 2, projects: "more than just" },
-    ],
-notes: "Throughout my life, I’ve always been known as the person who quickly understands complex ideas without needing extra explanation. Many peers often turned to me for clarification, which naturally strengthened my ability to communicate clearly, teach others, and take responsibility in group settings. Over time, this helped me develop strong leadership, adaptability, and influence within teams. I’ve learned how to remain calm under pressure, manage time effectively, and maintain a balance between performance, collaboration, and continuous learning. These experiences shaped me into someone who leads with understanding, solves problems efficiently, and inspires others to grow alongside me.",
-  },
+
   devops: {
     title: "DevOps & Deployment",
     icon: "☁️",
@@ -87,6 +71,23 @@ notes: "Throughout my life, I’ve always been known as the person who quickly u
       { name: "AI Tools & Integration", level: 55, years: 0, projects: "4" },
     ],
     notes: "As a web developer you're not done learning even after you retire, with that said, I'm currently focusing on refining my backend and DevOps skills — exploring Docker, AWS, and CI/CD — while diving deeper into TypeScript and preparing to learn Next.js. I'm also experimenting with AI tools to bring smarter, data-driven functionality into my future projects.",
+  },
+   softSkills: {
+    title: "Soft Skills",
+    icon: "🤝",
+    description: "Interpersonal and professional skills that drive collaboration and success",
+    skills: [
+      { name: "Fast Learning and understanding", level: 95, years: 2, projects: "more than just" },
+      { name: "Problem-Solving Mindset", level: 95, years: 2, projects: "more than just" },
+      { name: "Team Collaboration", level: 95, years: 2, projects: "+10" },
+      { name: "Leadership & Influence", level: 85, years: 2, projects: "more than just" },
+      { name: "Interpersonal skills", level: 85, years: 2, projects: "more than just" },
+      { name: "Time & Task Management", level: 85, years: 2, projects: "more than just" },
+      { name: "Professionalism & Reliability", level: 95, years: 2, projects: "more than just" },
+      { name: "Adaptability & Continuous Learning", level: 95, years: 2, projects: "more than just" },
+      { name: "Stress management", level: 85, years: 2, projects: "more than just" },
+    ],
+notes: "Throughout my life, I’ve always been known as the person who quickly understands complex ideas without needing extra explanation. Many peers often turned to me for clarification, which naturally strengthened my ability to communicate clearly, teach others, and take responsibility in group settings. Over time, this helped me develop strong leadership, adaptability, and influence within teams. I’ve learned how to remain calm under pressure, manage time effectively, and maintain a balance between performance, collaboration, and continuous learning. These experiences shaped me into someone who leads with understanding, solves problems efficiently, and inspires others to grow alongside me.",
   },
   
 };

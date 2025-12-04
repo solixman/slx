@@ -6,81 +6,90 @@ import { Link } from "react-router-dom";
 import AnimatedBackground from "@/components/AnimatedBackground";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-
 const allProjects = [
   {
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce solution with real-time inventory management, payment processing, and admin dashboard.",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800",
-    tags: ["React", "Node.js", "PostgreSQL", "Stripe"],
-    github: "#",
-    live: "#",
-    category: "Full Stack",
-  },
-  {
-    title: "AI Dashboard",
-    description: "Interactive dashboard for AI/ML model monitoring with real-time metrics, data visualization, and automated alerts.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
-    tags: ["Next.js", "Python", "TensorFlow", "D3.js"],
-    github: "#",
+    title: "ResQSX",
+    description: "A smart ambulance dispatch and emergency management system featuring real-time maps, incident tracking, and decision support tools for operators.",
+    image: "https://images.unsplash.com/photo-1581092160607-4c4b3a91f7f2?w=800",
+    tags: ["TypeScript", "React", "JSON Server", "ChadCN/UI", "UML", "Jira"],
+    github: "https://github.com/solixman/resQSX",
     live: "#",
     category: "AI/ML",
   },
   {
-    title: "Social Media App",
-    description: "Mobile-first social platform with real-time messaging, stories, and content sharing capabilities.",
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800",
-    tags: ["React Native", "Firebase", "Node.js"],
-    github: "#",
-    live: "#",
-    category: "Mobile",
-  },
-  {
-    title: "Task Management System",
-    description: "Collaborative project management tool with Kanban boards, time tracking, and team analytics.",
-    image: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=800",
-    tags: ["Vue.js", "Express", "MongoDB", "Socket.io"],
-    github: "#",
+    title: "CareFlow",
+    description: "A clinic and patient management platform that helps doctors, patients, and administrators manage appointments, schedules, and records efficiently.",
+    image: "https://images.unsplash.com/photo-1580281657521-9e8ce3b0a5d3?w=800",
+    tags: ["Express", "Node.js", "TypeScript", "React", "ChadCN/UI", "UML", "Jira"],
+    github: "https://github.com/solixman/careFlow",
     live: "#",
     category: "Full Stack",
   },
   {
-    title: "Crypto Portfolio Tracker",
-    description: "Real-time cryptocurrency portfolio management with price alerts, historical charts, and tax reporting.",
-    image: "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=800",
-    tags: ["React", "GraphQL", "Redis", "WebSocket"],
-    github: "#",
+    title: "CodeFolio",
+    description: "A full-stack personal portfolio system where users can manage and update their projects through an integrated admin dashboard.",
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800",
+    tags: ["Qraphql","Express", "Node.js", "TypeScript", "React", "ChadCN/UI", "UML", "Jira"],
+    github: "https://github.com/solixman/codeFolio",
+    live: "#",
+    category: "Full Stack",
+  },
+  {
+    title: "SLX-Auth",
+    description: "A modular authentication package for Node.js and Express providing secure, reusable REST APIs for modern web applications.",
+    image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?w=800",
+    tags: ["Express", "Node.js", "JavaScript"],
+    github: "https://github.com/solixman/SLX-auth",
+    live: "#",
+    category: "Full Stack",
+  },
+  {
+    title: "FinTrack",
+    description: "A FinTech web app that allows users to monitor expenses, set savings goals, and visualize financial trends through interactive dashboards.",
+    image: "https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=800",
+    tags: ["Express", "Node.js", "JavaScript", "EJS (SSR)", "UML", "Jira"],
+    github: "https://github.com/solixman/FinTrack",
     live: "#",
     category: "FinTech",
   },
   {
-    title: "Health & Fitness App",
-    description: "Personal fitness companion with workout tracking, nutrition planning, and progress analytics.",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800",
-    tags: ["Flutter", "Firebase", "TensorFlow Lite"],
-    github: "#",
+    title: "TicTacToe",
+    description: "A flexible, customizable version of Tic Tac Toe that supports dynamic grid sizes and winning conditions for a modern, engaging experience.",
+    image: "https://images.unsplash.com/photo-1617469767053-3e3e1c44a0d4?w=800",
+    tags: ["JavaScript (Vanilla)"],
+    github: "https://github.com/solixman/tictactoe",
+    live: "#",
+    category: "EdTech",
+  },
+  {
+    title: "NotesDeFrais",
+    description: "An AI-assisted expense management system that simplifies reimbursement processes, travel budgeting, and financial reporting for organizations.",
+    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800",
+    tags: ["AI-driven Development", "Vue.js", "Laravel"],
+    github: "https://github.com/solixman/NotesDeFrais",
+    live: "#",
+    category: "AI/ML",
+  },
+  {
+    title: "Borne-de-Commande",
+    description: "A self-ordering terminal app built in Flutter, allowing users to browse products, place orders, and make payments seamlessly.",
+    image: "https://images.unsplash.com/photo-1603575448364-0443a8a3afc2?w=800",
+    tags: ["AI-driven Development", "Flutter"],
+    github: "https://github.com/solixman/Borne_de_comande",
     live: "#",
     category: "Mobile",
   },
   {
-    title: "Real Estate Platform",
-    description: "Property listing and management system with virtual tours, mortgage calculator, and agent portal.",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800",
-    tags: ["Next.js", "Prisma", "PostgreSQL", "Three.js"],
-    github: "#",
+    title: "Solixmen’z",
+    description: "An e-commerce store for luxury fashion products with cart management, checkout system, and admin tools for order tracking.",
+    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800",
+    tags: ["React", "Node.js", "PostgreSQL", "Stripe"],
+    github: "https://github.com/solixman/Solixmen-z",
     live: "#",
     category: "Full Stack",
   },
-  {
-    title: "Learning Management System",
-    description: "Educational platform with course creation, video streaming, quizzes, and certification.",
-    image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800",
-    tags: ["React", "Django", "AWS", "FFmpeg"],
-    github: "#",
-    live: "#",
-    category: "EdTech",
-  },
 ];
+
 
 const categories = ["All", "Full Stack", "AI/ML", "Mobile", "FinTech", "EdTech"];
 
@@ -117,13 +126,7 @@ const ProjectCard = ({ project, index }: { project: typeof allProjects[0]; index
             >
               <Github size={18} />
             </motion.a>
-            <motion.a
-              href={project.live}
-              whileHover={{ scale: 1.1 }}
-              className="p-2 rounded-lg glass text-foreground hover:text-primary"
-            >
-              <ExternalLink size={18} />
-            </motion.a>
+          
           </div>
         </div>
         <div className="p-6">

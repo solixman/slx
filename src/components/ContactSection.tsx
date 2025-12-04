@@ -5,9 +5,9 @@ import { Mail, MapPin, Phone, Send, Loader2 } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 
 const contactInfo = [
-  { icon: Mail, label: "Email", value: "hello@slx.dev", href: "mailto:hello@slx.dev" },
-  { icon: Phone, label: "Phone", value: "+1 (555) 123-4567", href: "tel:+15551234567" },
-  { icon: MapPin, label: "Location", value: "San Francisco, CA", href: "#" },
+  { icon: Mail, label: "Email", value: "soulaymanjaa09@gmail.com", href: "mailto:hello@slx.dev" },
+  { icon: Phone, label: "Phone", value: "+212-690544179", href: "tel:+212-690544179" },
+  { icon: MapPin, label: "Location", value: "Morocco, Casablanca", href: "#" },
 ];
 
 const ContactSection = () => {
@@ -38,7 +38,7 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="py-32 relative" ref={ref}>
-      {/* Background decoration */}
+      
       <motion.div
         className="absolute bottom-0 left-0 right-0 h-1/2 opacity-30"
         style={{
@@ -58,13 +58,13 @@ const ContactSection = () => {
             Let's Work Together
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Have a project in mind? I'd love to hear about it. Send me a message
+            Have a project in mind? I am a good fit for a role? Just wanna get to know me? I'd love to hear about it. Send me a message
             and let's create something amazing together.
           </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          {/* Contact Info */}
+          
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -157,7 +157,7 @@ const ContactSection = () => {
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="w-full px-4 py-3 rounded-xl glass bg-transparent border border-border focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-all text-foreground placeholder:text-muted-foreground resize-none"
-                  placeholder="Tell me about your project..."
+                  placeholder="Start The Conversation..."
                 />
               </div>
 

@@ -3,27 +3,28 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Briefcase, Calendar } from "lucide-react";
 
+
 const experiences = [
   {
-    title: "Senior Full-Stack Developer",
-    company: "Tech Innovators Inc.",
-    period: "2022 - Present",
-    description: "Leading development of scalable web applications, mentoring junior developers, and architecting cloud solutions.",
-    technologies: ["React", "Node.js", "AWS", "PostgreSQL"],
+    title: "2nd year Full-Stack Developer leaner",
+    company: "Youcode",
+    period: "sep-2025 - Present",
+    description: "worked on multiple projects to learn all it takes to be a Mern-Stack Developer ",
+    technologies: ["React", "Node.js", "AWS", "MongoDB","CI/CD","DevOps"],
   },
   {
     title: "Full-Stack Developer",
-    company: "Digital Solutions Co.",
-    period: "2020 - 2022",
-    description: "Built and maintained multiple client projects, implemented CI/CD pipelines, and optimized application performance.",
-    technologies: ["Vue.js", "Python", "Docker", "MongoDB"],
+    company: "Marogest",
+    period: "May-2025 - Jul2022",
+    description: "Built and maintained multiple client projects, and optimized application performance.",
+    technologies: ["Vue.js", "laravel", "flutter", "SQL"],
   },
   {
-    title: "Frontend Developer",
-    company: "Creative Agency",
-    period: "2018 - 2020",
-    description: "Developed responsive web interfaces, collaborated with designers, and implemented modern UI/UX practices.",
-    technologies: ["React", "TypeScript", "Sass", "GraphQL"],
+    title: "1st year Full-Stack Developer leaner",
+    company: "Youode",
+    period: "2024 - 2025",
+    description: "Learned web deevelopement common knowladge and dived into php/laravel stack",
+    technologies: ["php", "Laravel", "Javascript", "UML","SQL"],
   },
 ];
 
