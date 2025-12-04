@@ -13,63 +13,63 @@ const skillsData = {
     icon: "🎨",
     description: "Building responsive, interactive, and user-friendly interfaces",
     skills: [
-      { name: "HTML, CSS, JavaScript", level: 95, years: 2, projects: '+20' },
-      { name: "SSR", level: 90, years: 2, projects: '+10' },
-      { name: "React", level: 88, years: "+1", projects: "+5" },
+      { name: "HTML, CSS, JavaScript", level: 95, years: 2, projects: "+20" },
+      { name: "SSR", level: 90, years: 2, projects: "+10" },
+      { name: "React", level: 70, years: "+1", projects: "+5" },
       { name: "TypeScript", level: 80, years: 1, projects: "+5" },
-      { name: "UI Libraries (ShadCN/UI)", level: 85, years: 1, projects: 2 },
+      { name: "UI Libraries (ShadCN/UI)", level: 85, years: 1, projects: "2" },
     ],
+    notes: "Your notes about frontend development go here...",
   },
   backend: {
     title: "Backend Development",
     icon: "⚙️",
     description: "Designing scalable APIs and robust server-side solutions",
     skills: [
-      { name: "PHP & Laravel", level: 90, years: 3, projects: 25 },
-      { name: "Node.js / Express", level: 88, years: 3, projects: 20 },
-      { name: "Eloquent / Mongoose ORM", level: 88, years: 3, projects: 22 },
-      { name: "REST APIs & MVC", level: 90, years: 3, projects: 25 },
+      { name: "PHP & Laravel", level: 90, years: 2, projects: "+15" },
+      { name: "Node.js / Express", level: 88, years: 2, projects: "+10" },
+      { name: "GraphQL", level: 85, years: 1, projects: "+5" },
+      { name: "PostgreSQL / MySQL", level: 85, years: 2, projects: "+10" },
+      { name: "MongoDB", level: 85, years: 1, projects: "+5" },
     ],
-  },
-  databases: {
-    title: "Databases",
-    icon: "🗄️",
-    description: "Designing and managing relational and NoSQL databases",
-    skills: [
-      { name: "PostgreSQL / MySQL", level: 85, years: 3, projects: 20 },
-      { name: "MongoDB", level: 85, years: 2, projects: 15 },
-    ],
+    notes: "Your notes about backend development go here...",
   },
   devops: {
     title: "DevOps & Deployment",
     icon: "☁️",
     description: "Deploying and managing cloud infrastructure",
     skills: [
-      { name: "AWS (S3, EC2, VPC)", level: 70, years: 1, projects: 8 },
-      { name: "Vercel", level: 88, years: 2, projects: 15 },
-      { name: "Docker", level: 55, years: 1, projects: 5 },
+      { name: "AWS", level: 60, years: 1, projects: "+3" },
+      { name: "Vercel", level: 88, years: 2, projects: "+15" },
+      { name: "Docker", level: 55, years: 1, projects: "+2" },
     ],
+    notes: "Your notes about DevOps and deployment go here...",
   },
   tools: {
     title: "Tools & Practices",
     icon: "🛠️",
     description: "Professional development tools and best practices",
     skills: [
-      { name: "Git / GitHub", level: 90, years: 4, projects: 30 },
-      { name: "Problem-solving & Debugging", level: 95, years: 4, projects: 30 },
-      { name: "AI-Driven Development", level: 80, years: 1, projects: 10 },
+      { name: "Git / GitHub", level: 90, years: 2, projects: "+20" },
+      { name: "Jira", level: 90, years: 1, projects: "+10" },
+      { name: "UML", level: 90, years: 2, projects: "+15" },
+      { name: "REST/GraphQL APIs & MVC", level: 90, years: 2, projects: "+15" },
+      { name: "Problem-solving & Debugging", level: 95, years: 2, projects: "+20" },
+      { name: "AI-Driven Development", level: 80, years: 1, projects: "+10" },
     ],
+    notes: "Your notes about tools and practices go here...",
   },
   learning: {
     title: "Currently Learning",
     icon: "📚",
     description: "Technologies I'm actively improving and exploring",
     skills: [
-      { name: "Next.js", level: 50, years: 0, projects: 2 },
-      { name: "Advanced TypeScript", level: 60, years: 1, projects: 5 },
-      { name: "Docker & CI/CD", level: 45, years: 0, projects: 3 },
-      { name: "AI Tools & Integration", level: 55, years: 0, projects: 4 },
+      { name: "Next.js", level: 50, years: 0, projects: "2" },
+      { name: "Advanced TypeScript", level: 60, years: 1, projects: "5" },
+      { name: "Docker & CI/CD", level: 45, years: 0, projects: "3" },
+      { name: "AI Tools & Integration", level: 55, years: 0, projects: "4" },
     ],
+    notes: "Your notes about what you're currently learning go here...",
   },
 };
 
@@ -140,6 +140,16 @@ const SkillCategory = ({ category, data, index }: { category: string; data: type
           <SkillBar key={skill.name} skill={skill} index={skillIndex} />
         ))}
       </div>
+      {/* Notes/Report Text Placeholder */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={isInView ? { opacity: 1 } : {}}
+        transition={{ delay: 0.3 }}
+        className="mt-6 glass rounded-xl p-6 border-l-4 border-primary/50"
+      >
+        <h3 className="text-sm font-semibold text-primary mb-2 uppercase tracking-wider">Notes & Insights</h3>
+        <p className="text-muted-foreground italic">{data.notes}</p>
+      </motion.div>
     </motion.section>
   );
 };
