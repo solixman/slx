@@ -32,7 +32,7 @@ const skillsData = {
       { name: "PostgreSQL / MySQL", level: 85, years: 2, projects: "+10" },
       { name: "MongoDB", level: 85, years: 1, projects: "+5" },
     ],
-    notes: "Backend development is where I’m most confident. I enjoy designing clean, scalable architectures and implementing efficient logic that keeps applications reliable and fast. I’ve built complete systems, found smart solutinos to real problems and optimized applications, using php&laravel and now focused on Node.js, managing everything from authentication and APIs to performance optimization and database structure. I focus on writing maintainable, well-documented code that supports long-term growth. briefly it just makes me happy working on backend",
+    notes: "Backend development is where I'm most confident. I enjoy designing clean, scalable architectures and implementing efficient logic that keeps applications reliable and fast. I've built complete systems, found smart solutinos to real problems and optimized applications, using php&laravel and now focused on Node.js, managing everything from authentication and APIs to performance optimization and database structure. I focus on writing maintainable, well-documented code that supports long-term growth. briefly it just makes me happy working on backend",
   },
   devops: {
     title: "DevOps & Deployment",
@@ -69,7 +69,22 @@ const skillsData = {
       { name: "Docker & CI/CD", level: 45, years: 0, projects: "3" },
       { name: "AI Tools & Integration", level: 55, years: 0, projects: "4" },
     ],
-    notes: "As a web developer you're not done learning even after you retire, with that said, I’m currently focusing on refining my backend and DevOps skills — exploring Docker, AWS, and CI/CD — while diving deeper into TypeScript and preparing to learn Next.js. I’m also experimenting with AI tools to bring smarter, data-driven functionality into my future projects.",
+    notes: "As a web developer you're not done learning even after you retire, with that said, I'm currently focusing on refining my backend and DevOps skills — exploring Docker, AWS, and CI/CD — while diving deeper into TypeScript and preparing to learn Next.js. I'm also experimenting with AI tools to bring smarter, data-driven functionality into my future projects.",
+  },
+  softSkills: {
+    title: "Soft Skills",
+    icon: "🤝",
+    description: "Interpersonal and professional skills that drive collaboration and success",
+    skills: [
+      { name: "Team Collaboration", level: 95, years: 2, projects: "+20" },
+      { name: "Leadership & Influence", level: 85, years: 2, projects: "+10" },
+      { name: "Problem-Solving Mindset", level: 95, years: 2, projects: "+20" },
+      { name: "Communication", level: 85, years: 2, projects: "+15" },
+      { name: "Time & Task Management", level: 85, years: 2, projects: "+15" },
+      { name: "Professionalism & Reliability", level: 95, years: 2, projects: "+20" },
+      { name: "Adaptability & Continuous Learning", level: 95, years: 2, projects: "+20" },
+    ],
+    notes: "Beyond technical skills, I believe that soft skills are the foundation of effective teamwork and successful projects. I work effectively in team environments, communicate clearly with both developers and non-technical stakeholders, and maintain structured workflows. I value client satisfaction, quality, and reliability—always delivering consistent results while staying adaptable to new tools, environments, and challenges.",
   },
 };
 
@@ -141,15 +156,17 @@ const SkillCategory = ({ category, data, index }: { category: string; data: type
         ))}
       </div>
       {/* Notes/Report Text Placeholder */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={isInView ? { opacity: 1 } : {}}
-        transition={{ delay: 0.3 }}
-        className="mt-6 glass rounded-xl p-6 border-l-4 border-primary/50"
-      >
-        <h3 className="text-sm font-semibold text-primary mb-2 uppercase tracking-wider">Notes & Insights</h3>
-        <p className="text-muted-foreground italic">{data.notes}</p>
-      </motion.div>
+      {data.notes && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ delay: 0.3 }}
+          className="mt-6 glass rounded-xl p-6 border-l-4 border-primary/50"
+        >
+          <h3 className="text-sm font-semibold text-primary mb-2 uppercase tracking-wider">Notes & Insights</h3>
+          <p className="text-muted-foreground italic">{data.notes}</p>
+        </motion.div>
+      )}
     </motion.section>
   );
 };

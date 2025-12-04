@@ -25,6 +25,15 @@ const skills = {
     { name: "AWS", level: 60 },
     { name: "Docker", level: 55 },
   ],
+  softSkills: [
+    { name: "Team Collaboration", level: 95 },
+    { name: "Leadership & Influence", level: 85 },
+    { name: "Problem-Solving Mindset", level: 95 },
+    { name: "Communication", level: 85 },
+    { name: "Time & Task Management", level: 85 },
+    { name: "Professionalism & Reliability", level: 95 },
+    { name: "Adaptability & Learning", level: 95 },
+  ],
 };
 
 const SkillBar = ({ name, level, delay }: { name: string; level: number; delay: number }) => {
@@ -58,6 +67,7 @@ const SkillsSection = () => {
     { title: "Frontend", skills: skills.frontend, icon: "🎨" },
     { title: "Backend", skills: skills.backend, icon: "⚙️" },
     { title: "Tools & DevOps", skills: skills.tools, icon: "🛠️" },
+    { title: "Soft Skills", skills: skills.softSkills, icon: "🤝" },
   ];
 
   return (
