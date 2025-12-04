@@ -19,7 +19,7 @@ const skillsData = {
       { name: "TypeScript", level: 80, years: 1, projects: "+5" },
       { name: "UI Libraries (ShadCN/UI)", level: 85, years: 1, projects: "2" },
     ],
-    notes: "Your notes about frontend development go here...",
+    notes: "don't let the fact that my primary focus is backend and full-stack logic fool you, I maintain a working proficiency in frontend technologies like React, Server Side Rendering, UI libraries(ChadCN/UI) and more. I aim to strengthen my frontend expertise in the coming months and years by exploring modern front end focus technologies like Next.js and improving component design and interactivity.",
   },
   backend: {
     title: "Backend Development",
@@ -32,18 +32,18 @@ const skillsData = {
       { name: "PostgreSQL / MySQL", level: 85, years: 2, projects: "+10" },
       { name: "MongoDB", level: 85, years: 1, projects: "+5" },
     ],
-    notes: "Your notes about backend development go here...",
+    notes: "Backend development is where I’m most confident. I enjoy designing clean, scalable architectures and implementing efficient logic that keeps applications reliable and fast. I’ve built complete systems, found smart solutinos to real problems and optimized applications, using php&laravel and now focused on Node.js, managing everything from authentication and APIs to performance optimization and database structure. I focus on writing maintainable, well-documented code that supports long-term growth. briefly it just makes me happy working on backend",
   },
   devops: {
     title: "DevOps & Deployment",
     icon: "☁️",
-    description: "Deploying and managing cloud infrastructure",
+    description: "I do have a somewhat experience in deploying and managing cloud infrastructure using AWS services like S3, EC2, and VPC to handle storage, hosting, and networking efficiently. I Find it very Interesting and with time I am Willing to learn it to the engineering level ",
     skills: [
       { name: "AWS", level: 60, years: 1, projects: "+3" },
       { name: "Vercel", level: 88, years: 2, projects: "+15" },
       { name: "Docker", level: 55, years: 1, projects: "+2" },
     ],
-    notes: "Your notes about DevOps and deployment go here...",
+    notes: "",
   },
   tools: {
     title: "Tools & Practices",
@@ -57,7 +57,7 @@ const skillsData = {
       { name: "Problem-solving & Debugging", level: 95, years: 2, projects: "+20" },
       { name: "AI-Driven Development", level: 80, years: 1, projects: "+10" },
     ],
-    notes: "Your notes about tools and practices go here...",
+    notes: "I see a lot of new learners saying 'you don't have to do that' or 'that's not necessery to learn' but I say that professional development tools and best practices centered around clean code, efficient workflows, version control, and automation are all aiming to improve productivity and long-term project quality. that's why with every new technologie or project I try to learn and use them as much as possible",
   },
   learning: {
     title: "Currently Learning",
@@ -69,7 +69,7 @@ const skillsData = {
       { name: "Docker & CI/CD", level: 45, years: 0, projects: "3" },
       { name: "AI Tools & Integration", level: 55, years: 0, projects: "4" },
     ],
-    notes: "Your notes about what you're currently learning go here...",
+    notes: "As a web developer you're not done learning even after you retire, with that said, I’m currently focusing on refining my backend and DevOps skills — exploring Docker, AWS, and CI/CD — while diving deeper into TypeScript and preparing to learn Next.js. I’m also experimenting with AI tools to bring smarter, data-driven functionality into my future projects.",
   },
 };
 
