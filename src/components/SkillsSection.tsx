@@ -5,20 +5,24 @@ import { useRef } from "react";
 const skills = {
   frontend: [
     { name: "HTML/CSS/JS", level: 95 },
-    { name: "React", level: 88 },
+    { name: "SSR", level: 90 },
+    { name: "React", level: 70 },
     { name: "TypeScript", level: 80 },
     { name: "UI Libraries (ShadCN)", level: 85 },
   ],
   backend: [
     { name: "PHP & Laravel", level: 90 },
     { name: "Node.js / Express", level: 88 },
+    { name: "GraphQL", level: 85 },
     { name: "PostgreSQL / MySQL", level: 85 },
     { name: "MongoDB", level: 85 },
   ],
   tools: [
     { name: "Git / GitHub", level: 90 },
-    { name: "REST APIs & MVC", level: 90 },
-    { name: "AWS (S3, EC2)", level: 70 },
+    { name: "Jira", level: 90 },
+    { name: "UML", level: 90 },
+    { name: "REST/GraphQL APIs & MVC", level: 90 },
+    { name: "AWS", level: 60 },
     { name: "Docker", level: 55 },
   ],
 };

@@ -31,7 +31,7 @@ const services = [
   {
     icon: Cloud,
     title: "Cloud Solutions",
-    description: "Deploying and managing applications on AWS, GCP, and other cloud platforms.",
+    description: "Deploying and managing applications on AWS (actually deployed with some AWS services, and still learning).",
     gradient: "from-blue-500 to-indigo-500",
   },
   {

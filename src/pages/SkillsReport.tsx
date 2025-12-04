@@ -13,11 +13,11 @@ const skillsData = {
     icon: "🎨",
     description: "Building responsive, interactive, and user-friendly interfaces",
     skills: [
-      { name: "HTML, CSS, JavaScript", level: 95, years: 4, projects: 30 },
-      { name: "React", level: 88, years: 3, projects: 20 },
-      { name: "TypeScript", level: 80, years: 2, projects: 15 },
-      { name: "UI Libraries (ShadCN/UI)", level: 85, years: 2, projects: 18 },
-      { name: "Tailwind CSS", level: 90, years: 2, projects: 20 },
+      { name: "HTML, CSS, JavaScript", level: 95, years: 2, projects: '+20' },
+      { name: "SSR", level: 90, years: 2, projects: '+10' },
+      { name: "React", level: 88, years: "+1", projects: "+5" },
+      { name: "TypeScript", level: 80, years: 1, projects: "+5" },
+      { name: "UI Libraries (ShadCN/UI)", level: 85, years: 1, projects: 2 },
     ],
   },
   backend: {
@@ -77,7 +77,7 @@ const certifications = [
   { name: "EF SET English Certificate (C2 Proficient)", issuer: "EF Education First", year: 2024, link: "https://cert.efset.org/en/MLz1mP" },
 ];
 
-const SkillBar = ({ skill, index }: { skill: { name: string; level: number; years: number; projects: number }; index: number }) => {
+const SkillBar = ({ skill, index }: { skill: { name: string; level: number; years: number|string; projects: number|string }; index: number }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -145,8 +145,8 @@ const SkillCategory = ({ category, data, index }: { category: string; data: type
 };
 
 const SkillsReport = () => {
-  const totalYears = 4;
-  const totalProjects = 30;
+  const totalYears = 2;
+  const totalProjects = 20;
   const totalTechnologies = Object.values(skillsData).reduce((acc, cat) => acc + cat.skills.length, 0);
 
   return (
