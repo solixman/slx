@@ -1,7 +1,8 @@
+import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { ExternalLink, Github, ArrowLeft, Download } from "lucide-react";
+import { ExternalLink, Github, ArrowLeft, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import AnimatedBackground from "@/components/AnimatedBackground";
 import Navbar from "@/components/Navbar";
@@ -13,10 +14,12 @@ const allProjects = [
     image: "https://images.unsplash.com/photo-1581092160607-4c4b3a91f7f2?w=800",
     tags: ["TypeScript", "React", "JSON Server", "ChadCN/UI", "UML", "Jira"],
     github: "https://github.com/solixman/resQSX",
+
     live: "#",
-    category: "AI/ML",
+    category: "Backend",
   },
   {
+
     title: "CareFlow",
     description: "A clinic and patient management platform that helps doctors, patients, and administrators manage appointments, schedules, and records efficiently.",
     image: "https://images.unsplash.com/photo-1580281657521-9e8ce3b0a5d3?w=800",
@@ -49,10 +52,12 @@ const allProjects = [
     image: "https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=800",
     tags: ["Express", "Node.js", "JavaScript", "EJS (SSR)", "UML", "Jira"],
     github: "https://github.com/solixman/FinTrack",
+
     live: "#",
     category: "FinTech",
   },
   {
+
     title: "TicTacToe",
     description: "A flexible, customizable version of Tic Tac Toe that supports dynamic grid sizes and winning conditions for a modern, engaging experience.",
     image: "https://images.unsplash.com/photo-1617469767053-3e3e1c44a0d4?w=800",
@@ -80,6 +85,7 @@ const allProjects = [
     category: "Mobile",
   },
   {
+
     title: "Solixmen’z",
     description: "An e-commerce store for luxury fashion products with cart management, checkout system, and admin tools for order tracking.",
     image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800",
@@ -92,6 +98,7 @@ const allProjects = [
 
 
 const categories = ["All", "Full Stack", "AI/ML", "Mobile", "FinTech", "EdTech"];
+
 
 const ProjectCard = ({ project, index }: { project: typeof allProjects[0]; index: number }) => {
   const ref = useRef(null);
@@ -211,21 +218,20 @@ const AllProjects = () => {
             ))}
           </div>
 
-          {/* Download Resume CTA */}
+          {/* Contact Me CTA */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
             className="text-center mt-16"
           >
-            <a
-              href="/resume.pdf"
-              download
+            <Link
+              to="/#contact"
               className="hero-button inline-flex items-center gap-2"
             >
-              <Download size={20} />
-              Download Resume
-            </a>
+              <MessageCircle size={20} />
+              Contact Me
+            </Link>
           </motion.div>
         </div>
       </main>
@@ -233,7 +239,5 @@ const AllProjects = () => {
     </div>
   );
 };
-
-import React from "react";
 
 export default AllProjects;

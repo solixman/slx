@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Logo from "./Logo";
-import { Github, Linkedin, Twitter, Heart, Download } from "lucide-react";
+import { Github, Linkedin, Twitter, MessageCircle } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -17,26 +17,27 @@ const Footer = () => {
             </span>
           </div>
 
-          {/* Download Resume & Social links */}
+          {/* Contact Me & Social links */}
           <div className="flex items-center gap-6">
             <motion.a
-              href="/resume.pdf"
-              download
+              href="#contact"
               whileHover={{ scale: 1.05 }}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-lg glass text-primary text-sm font-medium hover:bg-primary/10 transition-colors"
             >
-              <Download size={16} />
-              Download Resume
+              <MessageCircle size={16} />
+              Contact Me
             </motion.a>
             <div className="flex items-center gap-4">
               {[
-                { icon: Github, href: "#", label: "GitHub" },
-                { icon: Linkedin, href: "#", label: "LinkedIn" },
+                { icon: Github, href: "https://github.com/solixman", label: "GitHub" },
+                { icon: Linkedin, href: "https://www.linkedin.com/in/solixman", label: "LinkedIn" },
                 { icon: Twitter, href: "#", label: "Twitter" },
               ].map(({ icon: Icon, href, label }) => (
                 <motion.a
                   key={label}
                   href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, y: -2 }}
                   className="p-2 text-muted-foreground hover:text-primary transition-colors"
                   aria-label={label}
@@ -50,7 +51,7 @@ const Footer = () => {
 
         <div className="mt-8 pt-8 border-t border-border/30 text-center">
           <p className="text-muted-foreground text-sm flex items-center justify-center gap-1">
-            © {currentYear} SLX. Made By Soulayman Jaafar AKA "Solixman"using new technologies and some tea
+            © {currentYear} SLX. Made By Soulayman Jaafar AKA "Solixman" using new technologies and some tea
           </p>
         </div>
       </div>

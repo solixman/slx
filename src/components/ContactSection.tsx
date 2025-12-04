@@ -8,6 +8,7 @@ const contactInfo = [
   { icon: Mail, label: "Email", value: "soulaymanjaa09@gmail.com", href: "mailto:hello@slx.dev" },
   { icon: Phone, label: "Phone", value: "+212-690544179", href: "tel:+212-690544179" },
   { icon: MapPin, label: "Location", value: "Morocco, Casablanca", href: "#" },
+
 ];
 
 const ContactSection = () => {
@@ -77,6 +78,8 @@ const ContactSection = () => {
                 <motion.a
                   key={item.label}
                   href={item.href}
+                  target={item.label === "Location" ? "_blank" : undefined}
+                  rel={item.label === "Location" ? "noopener noreferrer" : undefined}
                   initial={{ opacity: 0, x: -20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ delay: 0.3 + index * 0.1 }}

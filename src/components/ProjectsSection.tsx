@@ -2,13 +2,16 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const projects = [
   {
     id: 1,
     title: "ResQSX",
+
     description: "A smart ambulance dispatching platform that allows emergency operators to manage incidents, track ambulances in real time, and make fast, data-driven decisions through an interactive map interface.",
     tags: ["TypeScript", "React", "JSON Server", "ChadCN/UI", "UML", "Jira"],
+
     image: "gradient-1",
     github: "https://github.com/solixman/resQSX",
     live: "#",
@@ -16,10 +19,12 @@ const projects = [
   {
     id: 2,
     title: "CareFlow",
+
     description: "A clinic management web app that helps doctors, patients, and administrators streamline appointments, schedules, and patient records with a clean, efficient interface. I had to find a solution to automatic appointments conflicts I'll be happy to discuss how I did it if you'd like to contact me. ",
     tags: ["Express", "Node.js", "TypeScript", "React", "ChadCN/UI", "UML", "Jira"],
     image: "gradient-3",
     github: "https://github.com/solixman/careFlow",
+
     live: "#",
   },
   {
@@ -29,7 +34,7 @@ const projects = [
     tags: ["JavaScript (Vanilla)"],
     image: "gradient-2",
     github: "https://github.com/solixman/tictactoe",
-    live: "#",
+
   },
 
   {
@@ -37,6 +42,7 @@ const projects = [
     title: "Borne-de-Commande",
     description: "A self-ordering terminal interface built with Flutter, enabling users to browse menus, customize orders, and make seamless purchases in-store.",
     tags: ["AI-driven Development","During internship", "Flutter"],
+
     image: "gradient-4",
     github: "https://github.com/solixman/Borne_de_comande",
     live: "#",
@@ -170,9 +176,11 @@ const ProjectsSection = () => {
           transition={{ delay: 0.8 }}
           className="text-center mt-12"
         >
+
           <motion.a
             href="/projects"
             whileHover={{ x: 5 }}
+
             className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
           >
             View All Projects <ArrowRight size={18} />
