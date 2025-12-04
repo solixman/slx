@@ -1,7 +1,8 @@
+import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { ExternalLink, Github, ArrowLeft, Download } from "lucide-react";
+import { ExternalLink, Github, ArrowLeft, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import AnimatedBackground from "@/components/AnimatedBackground";
 import Navbar from "@/components/Navbar";
@@ -9,80 +10,89 @@ import Footer from "@/components/Footer";
 
 const allProjects = [
   {
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce solution with real-time inventory management, payment processing, and admin dashboard.",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800",
-    tags: ["React", "Node.js", "PostgreSQL", "Stripe"],
+    title: "ResQSX",
+    description: "Ambulance dispatching solution with real-time fleet management, emergency incident tracking, and interactive map visualization for regulation operators to manage interventions efficiently.",
+    image: "https://images.unsplash.com/photo-1587745416684-47953f16f02f?w=800",
+    tags: ["TypeScript", "React", "JSON Server", "Shadcn/UI", "UML", "Jira"],
+    github: "#",
+    live: "#",
+    category: "Healthcare",
+  },
+  {
+    title: "CareFlow",
+    description: "Medical appointment and record management system for clinics. Enables patients to book online, doctors to manage calendars, and staff to supervise clinical operations seamlessly.",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800",
+    tags: ["Node.js/Express", "TypeScript", "React", "Shadcn/UI", "UML", "Jira"],
+    github: "#",
+    live: "#",
+    category: "Healthcare",
+  },
+  {
+    title: "CodeFolio",
+    description: "Full-stack portfolio management platform with a comprehensive admin dashboard, allowing developers to dynamically manage and customize their portfolio content and projects.",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800",
+    tags: ["Node.js/Express", "TypeScript", "React", "Shadcn/UI", "UML", "Jira"],
     github: "#",
     live: "#",
     category: "Full Stack",
   },
   {
-    title: "AI Dashboard",
-    description: "Interactive dashboard for AI/ML model monitoring with real-time metrics, data visualization, and automated alerts.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
-    tags: ["Next.js", "Python", "TensorFlow", "D3.js"],
+    title: "SLX-Auth",
+    description: "Reusable authentication package built with Express and Node.js. Provides secure REST API endpoints for user registration, login, and session management across multiple projects.",
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800",
+    tags: ["Node.js/Express", "JavaScript", "REST APIs"],
     github: "#",
     live: "#",
-    category: "AI/ML",
+    category: "Backend",
   },
   {
-    title: "Social Media App",
-    description: "Mobile-first social platform with real-time messaging, stories, and content sharing capabilities.",
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800",
-    tags: ["React Native", "Firebase", "Node.js"],
-    github: "#",
-    live: "#",
-    category: "Mobile",
-  },
-  {
-    title: "Task Management System",
-    description: "Collaborative project management tool with Kanban boards, time tracking, and team analytics.",
-    image: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=800",
-    tags: ["Vue.js", "Express", "MongoDB", "Socket.io"],
-    github: "#",
-    live: "#",
-    category: "Full Stack",
-  },
-  {
-    title: "Crypto Portfolio Tracker",
-    description: "Real-time cryptocurrency portfolio management with price alerts, historical charts, and tax reporting.",
-    image: "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=800",
-    tags: ["React", "GraphQL", "Redis", "WebSocket"],
+    title: "FinTrack",
+    description: "Personal budget management application for tracking expenses, setting financial goals, and visualizing financial data with interactive charts and comprehensive reports.",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800",
+    tags: ["Node.js/Express", "JavaScript", "EJS (SSR)", "UML", "Jira"],
     github: "#",
     live: "#",
     category: "FinTech",
   },
   {
-    title: "Health & Fitness App",
-    description: "Personal fitness companion with workout tracking, nutrition planning, and progress analytics.",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800",
-    tags: ["Flutter", "Firebase", "TensorFlow Lite"],
+    title: "TicTacToe Pro",
+    description: "Dynamic and scalable Tic Tac Toe game with customizable grid sizes (n×n) and adjustable win conditions (k alignments). Features responsive design and engaging user experience.",
+    image: "https://images.unsplash.com/photo-1611996575749-79a3a250f948?w=800",
+    tags: ["JavaScript Vanilla", "CSS", "HTML"],
+    github: "#",
+    live: "#",
+    category: "Games",
+  },
+  {
+    title: "NotesDeFrais",
+    description: "Expense management system for companies to track paid/unpaid work travel expenses, manage reimbursements, and handle travel event budgets efficiently.",
+    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800",
+    tags: ["AI Driven Dev", "Vue.js", "Laravel"],
+    github: "#",
+    live: "#",
+    category: "Enterprise",
+  },
+  {
+    title: "Borne de Commande",
+    description: "Self-ordering terminal frontend application where customers can browse menus, customize orders, and complete purchases through an intuitive touch-friendly interface.",
+    image: "https://images.unsplash.com/photo-1567521464027-f127ff144326?w=800",
+    tags: ["AI Driven Dev", "Flutter"],
     github: "#",
     live: "#",
     category: "Mobile",
   },
   {
-    title: "Real Estate Platform",
-    description: "Property listing and management system with virtual tours, mortgage calculator, and agent portal.",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800",
-    tags: ["Next.js", "Prisma", "PostgreSQL", "Three.js"],
+    title: "Solixmen'z",
+    description: "Full-featured e-commerce store for classy clothing with product catalog, shopping cart, secure checkout, user accounts, and order management functionality.",
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800",
+    tags: ["E-commerce", "Full Stack"],
     github: "#",
     live: "#",
-    category: "Full Stack",
-  },
-  {
-    title: "Learning Management System",
-    description: "Educational platform with course creation, video streaming, quizzes, and certification.",
-    image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800",
-    tags: ["React", "Django", "AWS", "FFmpeg"],
-    github: "#",
-    live: "#",
-    category: "EdTech",
+    category: "E-commerce",
   },
 ];
 
-const categories = ["All", "Full Stack", "AI/ML", "Mobile", "FinTech", "EdTech"];
+const categories = ["All", "Healthcare", "Full Stack", "Backend", "FinTech", "Games", "Enterprise", "Mobile", "E-commerce"];
 
 const ProjectCard = ({ project, index }: { project: typeof allProjects[0]; index: number }) => {
   const ref = useRef(null);
@@ -208,21 +218,20 @@ const AllProjects = () => {
             ))}
           </div>
 
-          {/* Download Resume CTA */}
+          {/* Contact Me CTA */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
             className="text-center mt-16"
           >
-            <a
-              href="/resume.pdf"
-              download
+            <Link
+              to="/#contact"
               className="hero-button inline-flex items-center gap-2"
             >
-              <Download size={20} />
-              Download Resume
-            </a>
+              <MessageCircle size={20} />
+              Contact Me
+            </Link>
           </motion.div>
         </div>
       </main>
@@ -230,7 +239,5 @@ const AllProjects = () => {
     </div>
   );
 };
-
-import React from "react";
 
 export default AllProjects;

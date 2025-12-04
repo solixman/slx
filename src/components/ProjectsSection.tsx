@@ -2,40 +2,41 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "A full-featured e-commerce platform with real-time inventory, payment processing, and admin dashboard.",
-    tags: ["React", "Node.js", "PostgreSQL", "Stripe"],
+    title: "ResQSX",
+    description: "Ambulance dispatching solution with real-time fleet management, emergency incident tracking, and interactive map visualization for regulation operators.",
+    tags: ["TypeScript", "React", "JSON Server", "Shadcn/UI"],
     image: "gradient-1",
     github: "#",
     live: "#",
   },
   {
     id: 2,
-    title: "AI Chat Application",
-    description: "Real-time chat application powered by AI with smart responses and conversation memory.",
-    tags: ["Next.js", "OpenAI", "WebSocket", "Redis"],
+    title: "CareFlow",
+    description: "Medical appointment and record management system for clinics with online booking, doctor scheduling, and administrative oversight tools.",
+    tags: ["Node.js/Express", "TypeScript", "React", "Shadcn/UI"],
     image: "gradient-2",
     github: "#",
     live: "#",
   },
   {
     id: 3,
-    title: "Project Management Tool",
-    description: "Collaborative project management with Kanban boards, time tracking, and team analytics.",
-    tags: ["Vue.js", "GraphQL", "MongoDB", "Docker"],
+    title: "CodeFolio",
+    description: "Full-stack portfolio management platform with an admin dashboard allowing users to dynamically manage and customize their portfolio content.",
+    tags: ["Node.js/Express", "TypeScript", "React", "Shadcn/UI"],
     image: "gradient-3",
     github: "#",
     live: "#",
   },
   {
     id: 4,
-    title: "Social Media Dashboard",
-    description: "Analytics dashboard for social media management with scheduling and performance insights.",
-    tags: ["React", "D3.js", "Python", "AWS"],
+    title: "FinTrack",
+    description: "Personal budget management app for tracking expenses, setting financial goals, and visualizing financial data with interactive charts.",
+    tags: ["Node.js/Express", "JavaScript", "EJS", "SSR"],
     image: "gradient-4",
     github: "#",
     live: "#",
@@ -176,13 +177,12 @@ const ProjectsSection = () => {
           transition={{ delay: 0.8 }}
           className="text-center mt-12"
         >
-          <motion.a
-            href="#"
-            whileHover={{ x: 5 }}
+          <Link
+            to="/all-projects"
             className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
           >
             View All Projects <ArrowRight size={18} />
-          </motion.a>
+          </Link>
         </motion.div>
       </div>
     </section>
