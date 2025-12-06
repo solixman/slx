@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
 
-const words = ["a Full-Stack Developer", "Soulayman Jaafar", "a Problem Solver", "a Tech Innovator"]
+const words = ["a web Developer", "Soulayman Jaafar", "a Problem Solver", "a Tech Innovator"]
 
 const TypeWriter = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0)
