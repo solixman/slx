@@ -12,7 +12,7 @@ const projects = [
     description: "A smart ambulance dispatching platform that allows emergency operators to manage incidents, track ambulances in real time, and make fast, data-driven decisions through an interactive map interface.",
     tags: ["TypeScript", "React", "JSON Server", "ChadCN/UI", "UML", "Jira"],
 
-    image: "gradient-1",
+    image: "/src/assets/ResQSX.png",
     github: "https://github.com/solixman/resQSX",
     live: "#",
   },
@@ -22,7 +22,7 @@ const projects = [
 
     description: "A clinic management web app that helps doctors, patients, and administrators streamline appointments, schedules, and patient records with a clean, efficient interface. I had to find a solution to automatic appointments conflicts I'll be happy to discuss how I did it if you'd like to contact me. ",
     tags: ["Express", "Node.js", "TypeScript", "React", "ChadCN/UI", "UML", "Jira"],
-    image: "gradient-3",
+    image: "/src/assets/careFlow.png",
     github: "https://github.com/solixman/careFlow",
 
     live: "#",
@@ -30,9 +30,9 @@ const projects = [
   {
     id: 3,
     title: "TicTacToe",
-    description: "A customizable and responsive Tic Tac Toe game that lets users define grid size and winning conditions, offering a fresh and challenging twist to the classic game. Note that this project was to show my logical thinking not my design skills as it was with a very limited time",
+    description: "(Note that this project was to show my logical thinking not my design skills as it was done with a very limited time)A customizable and responsive Tic Tac Toe game that lets users define grid size and winning conditions, offering a fresh and challenging twist to the classic game.",
     tags: ["JavaScript (Vanilla)"],
-    image: "gradient-2",
+    image: "/src/assets/tictactoe.png",
     github: "https://github.com/solixman/tictactoe",
 
   },
@@ -43,19 +43,14 @@ const projects = [
     description: "A self-ordering terminal interface built with Flutter, enabling users to browse menus, customize orders, and make seamless purchases in-store.",
     tags: ["AI-driven Development","During internship", "Flutter"],
 
-    image: "gradient-4",
+    image: "/src/assets/Borne.png",
     github: "https://github.com/solixman/Borne_de_comande",
     live: "#",
   },
 ];
 
 
-const gradients = {
-  "gradient-1": "linear-gradient(135deg, hsl(187 100% 50% / 0.3) 0%, hsl(270 60% 60% / 0.3) 100%)",
-  "gradient-2": "linear-gradient(135deg, hsl(270 60% 60% / 0.3) 0%, hsl(330 80% 60% / 0.3) 100%)",
-  "gradient-3": "linear-gradient(135deg, hsl(150 60% 50% / 0.3) 0%, hsl(187 100% 50% / 0.3) 100%)",
-  "gradient-4": "linear-gradient(135deg, hsl(40 90% 60% / 0.3) 0%, hsl(20 80% 55% / 0.3) 100%)",
-};
+
 
 const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: number }) => {
   const ref = useRef(null);
@@ -75,8 +70,8 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
       {/* Project visual */}
       <div
         className="aspect-video relative overflow-hidden"
-        style={{ background: gradients[project.image as keyof typeof gradients] }}
-      >
+        >
+        <img src={project.image} alt="" />
         {/* Animated grid overlay */}
         <motion.div
           className="absolute inset-0 opacity-30"

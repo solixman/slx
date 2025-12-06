@@ -24,9 +24,9 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto">
         <div className="glass rounded-2xl px-6 py-3 flex items-center justify-between">
-          <Link to="/">
+          <a href="/#home">
             <Logo size={50} />
-          </Link>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">

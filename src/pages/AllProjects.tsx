@@ -11,7 +11,7 @@ const allProjects = [
   {
     title: "ResQSX",
     description: "A smart ambulance dispatch and emergency management system featuring real-time maps, incident tracking, and decision support tools for operators.",
-    image: "https://images.unsplash.com/photo-1581092160607-4c4b3a91f7f2?w=800",
+    image: "/src/assets/ResQSX.png",
     tags: ["TypeScript", "React", "JSON Server", "ChadCN/UI", "UML", "Jira"],
     github: "https://github.com/solixman/resQSX",
 
@@ -22,7 +22,7 @@ const allProjects = [
 
     title: "CareFlow",
     description: "A clinic and patient management platform that helps doctors, patients, and administrators manage appointments, schedules, and records efficiently.",
-    image: "https://images.unsplash.com/photo-1580281657521-9e8ce3b0a5d3?w=800",
+    image: "/src/assets/careFlow.png",
     tags: ["Express", "Node.js", "TypeScript", "React", "ChadCN/UI", "UML", "Jira"],
     github: "https://github.com/solixman/careFlow",
     live: "#",
@@ -31,7 +31,7 @@ const allProjects = [
   {
     title: "CodeFolio",
     description: "A full-stack personal portfolio system where users can manage and update their projects through an integrated admin dashboard.",
-    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800",
+    image: "/src/assets/codeFolio.png",
     tags: ["Qraphql","Express", "Node.js", "TypeScript", "React", "ChadCN/UI", "UML", "Jira"],
     github: "https://github.com/solixman/codeFolio",
     live: "#",
@@ -40,7 +40,7 @@ const allProjects = [
   {
     title: "SLX-Auth",
     description: "A modular authentication package for Node.js and Express providing secure, reusable REST APIs for modern web applications.",
-    image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?w=800",
+    image: "/src/assets/SLX-Auth.png",
     tags: ["Express", "Node.js", "JavaScript"],
     github: "https://github.com/solixman/SLX-auth",
     live: "#",
@@ -49,7 +49,7 @@ const allProjects = [
   {
     title: "FinTrack",
     description: "A FinTech web app that allows users to monitor expenses, set savings goals, and visualize financial trends through interactive dashboards.",
-    image: "https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=800",
+    image: "/src/assets/FinTrack.png",
     tags: ["Express", "Node.js", "JavaScript", "EJS (SSR)", "UML", "Jira"],
     github: "https://github.com/solixman/FinTrack",
 
@@ -60,7 +60,7 @@ const allProjects = [
 
     title: "TicTacToe",
     description: "A flexible, customizable version of Tic Tac Toe that supports dynamic grid sizes and winning conditions for a modern, engaging experience.",
-    image: "https://images.unsplash.com/photo-1617469767053-3e3e1c44a0d4?w=800",
+    image: "/src/assets/tictactoe.png",
     tags: ["JavaScript (Vanilla)"],
     github: "https://github.com/solixman/tictactoe",
     live: "#",
@@ -68,7 +68,7 @@ const allProjects = [
   },
   {
     title: "NotesDeFrais",
-    description: "An AI-assisted expense management system that simplifies reimbursement processes, travel budgeting, and financial reporting for organizations.",
+    description: "An expense management system that simplifies reimbursement processes, travel budgeting, and financial reporting for organizations.",
     image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800",
     tags: ["AI-driven Development", "Vue.js", "Laravel"],
     github: "https://github.com/solixman/NotesDeFrais",
@@ -78,7 +78,7 @@ const allProjects = [
   {
     title: "Borne-de-Commande",
     description: "A self-ordering terminal app built in Flutter, allowing users to browse products, place orders, and make payments seamlessly.",
-    image: "https://images.unsplash.com/photo-1603575448364-0443a8a3afc2?w=800",
+    image: "/src/assets/Borne.png",
     tags: ["AI-driven Development", "Flutter"],
     github: "https://github.com/solixman/Borne_de_comande",
     live: "#",
@@ -88,7 +88,7 @@ const allProjects = [
 
     title: "Solixmen’z",
     description: "An e-commerce store for luxury fashion products with cart management, checkout system, and admin tools for order tracking.",
-    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800",
+    image: "/src/assets/Solixmen'z.png",
     tags: ["React", "Node.js", "PostgreSQL", "Stripe"],
     github: "https://github.com/solixman/Solixmen-z",
     live: "#",

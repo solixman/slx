@@ -1,14 +1,16 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import {  Github, Linkedin, Twitter } from "lucide-react"
-import TypeWriter from "./TypeWriter"
+import { motion } from "framer-motion";
+import { Github, Linkedin,Mail } from "lucide-react";
+import TypeWriter from "./TypeWriter";
 import profileImage from "@/assets/profile.jpg";
 
 const HeroSection = () => {
-
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
+    >
       {/* Abstract background gradient */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-accent/10" />
@@ -64,8 +66,9 @@ const HeroSection = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto lg:mx-0 mb-10"
               >
-                I craft modern, scalable web applications with cutting-edge technologies. Transforming ideas&problems into
-                elegant, functional solutions.
+                I craft modern, scalable web applications with cutting-edge
+                technologies. Transforming ideas&problems into elegant,
+                functional solutions.
               </motion.p>
 
               {/* CTA Buttons */}
@@ -100,7 +103,7 @@ const HeroSection = () => {
                   whileHover={{ scale: 1.02 }}
                   className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl"
                 >
-                <img
+                  <img
                     src={profileImage}
                     alt="SLX - Full Stack Developer"
                     className="w-full h-full object-cover object-top"
@@ -112,17 +115,24 @@ const HeroSection = () => {
                 <motion.div
                   className="absolute -inset-4 border-2 border-primary/20 rounded-full"
                   animate={{ rotate: 360 }}
-                  transition={{ duration: 30, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
+                  transition={{
+                    duration: 30,
+                    repeat: Number.POSITIVE_INFINITY,
+                    ease: "linear",
+                  }}
                 />
                 <motion.div
                   className="absolute -inset-8 border border-accent/10 rounded-full"
                   animate={{ rotate: -360 }}
-                  transition={{ duration: 40, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
+                  transition={{
+                    duration: 40,
+                    repeat: Number.POSITIVE_INFINITY,
+                    ease: "linear",
+                  }}
                 />
               </div>
             </motion.div>
           </div>
-
         </div>
       </div>
 
@@ -134,9 +144,17 @@ const HeroSection = () => {
         className="fixed left-6 top-1/2 -translate-y-1/2 hidden lg:flex flex-col gap-4 z-50"
       >
         {[
-          { icon: Github, href: "https://github.com/solixman", label: "GitHub" },
-          { icon: Linkedin, href: "https://www.linkedin.com/in/solixman", label: "LinkedIn" },
-          { icon: Twitter, href: "#", label: "Twitter" },
+          {
+            icon: Github,
+            href: "https://github.com/solixman",
+            label: "GitHub",
+          },
+          {
+            icon: Linkedin,
+            href: "https://www.linkedin.com/in/solixman",
+            label: "LinkedIn",
+          },
+          { icon: Mail, href: "mailto:soulaymanjaa09@gmail.com", label: "Email" },
         ].map(({ icon: Icon, href, label }) => (
           <motion.a
             key={label}
@@ -154,7 +172,7 @@ const HeroSection = () => {
         <div className="w-px h-20 bg-gradient-to-b from-primary/50 to-transparent mx-auto mt-2" />
       </motion.div>
     </section>
-  )
-}
+  );
+};
 
-export default HeroSection
+export default HeroSection;
