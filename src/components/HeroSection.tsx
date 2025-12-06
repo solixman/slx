@@ -48,15 +48,19 @@ const HeroSection = () => {
               {/* Download Resume - Top */}
 
               {/* Main Title */}
-              <motion.h2
+              <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="section-title mb-6"
+                className="mb-6"
               >
-                <span className="block h-[1.2em]">I'm <TypeWriter /></span>
-                <span className="block">Building Digital Solutions</span>
-              </motion.h2>
+                <h2 className="section-title">
+                  I'm <TypeWriter />
+                </h2>
+                <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground/80 mt-2">
+                  Building Digital Solutions
+                </p>
+              </motion.div>
 
               {/* Subtitle */}
               <motion.p
