@@ -43,7 +43,7 @@ const Navbar = () => {
               </motion.a>
             ))}
             <motion.a
-              href="/resume.pdf"
+              href="/public/CV/soulayman jaafar.pdf"
               download
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}

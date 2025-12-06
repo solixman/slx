@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import { useRef } from "react";
 
 const skills = {
@@ -125,10 +126,10 @@ const SkillsSection = () => {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ delay: 0.8 }}
-          className="mt-16 text-center"
+          className="mt-10  text-center"
         >
-          <a href="/skills" className="text-muted-foreground ">See Full Skills Report</a>
-          <div className="flex flex-wrap justify-center gap-4 mt-5 ">
+          
+          <div className="mt-10 flex flex-wrap justify-center gap-4 mt-5 ">
             {["Next.js", "Vercel", "Eloquent", "Mongoose", "CI/CD", "AI Tools", "NestJS"].map(
               (tech, i) => (
                 <motion.span
@@ -144,6 +145,14 @@ const SkillsSection = () => {
               )
             )}
           </div>
+           <motion.a
+            href="/skills"
+            whileHover={{ x: 5 }}
+
+            className="mt-10 inline-flex items-center gap-2 text-primary font-medium hover:underline"
+          >
+            See full skills report <ArrowRight size={18} />
+          </motion.a>
         </motion.div>
       </div>
     </section>
