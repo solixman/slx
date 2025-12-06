@@ -5,7 +5,7 @@ import { Mail, MapPin, Phone, Send, Loader2 } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 
 const contactInfo = [
-  { icon: Mail, label: "Email", value: "soulaymanjaa09@gmail.com", href: "mailto:hello@slx.dev" },
+  { icon: Mail, label: "Email", value: "soulaymanjaa09@gmail.com", href: "mailto:soulaymanjaa09@gmail.com" },
   { icon: Phone, label: "Phone", value: "+212-690544179", href: "tel:+212-690544179" },
   { icon: MapPin, label: "Location", value: "Morocco, Casablanca", href: "#" },
 
@@ -59,7 +59,7 @@ const ContactSection = () => {
             Let's Work Together
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Have a project in mind? I am a good fit for a role? Just wanna get to know me? I'd love to hear about it. Send me a message
+            Have a project in mind? Am I a good fit for a role? Just want to get to know me? I'd love to hear about it. Send me a message
             and let's create something amazing together.
           </p>
         </motion.div>

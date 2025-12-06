@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
 
-const words = ["a Full-Stack Developer", "Soulayman JAAFAR ", "a Problem Solver", "a Tech Innovator"]
+const words = ["a Full-Stack Developer", "Soulayman Jaafar", "a Problem Solver", "a Tech Innovator"]
 
 const TypeWriter = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0)
@@ -37,8 +37,8 @@ const TypeWriter = () => {
   }, [currentText, isDeleting, currentWordIndex])
 
   return (
-    <span className="text-gradient inline-block min-w-max">
-      {currentText}
+    <span className="text-gradient inline-block whitespace-nowrap">
+      {currentText || "\u00A0"}
       <motion.span
         animate={{ opacity: [1, 0] }}
         transition={{ duration: 0.5, repeat: Number.POSITIVE_INFINITY, repeatType: "reverse" }}

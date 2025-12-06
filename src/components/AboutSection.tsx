@@ -68,7 +68,7 @@ const AboutSection = () => {
                   </p>
                   <p className="pl-4 text-muted-foreground">
                     <span className="text-green-400">passion</span>:{" "}
-                    <span className="text-yellow-300">"Infinit"</span>,
+                    <span className="text-yellow-300">"Infinite"</span>,
                   </p>
                   <p className="pl-4 text-muted-foreground">
                     <span className="text-green-400">coffee</span>:{" "}
