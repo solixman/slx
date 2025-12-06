@@ -30,7 +30,7 @@ const projects = [
   {
     id: 3,
     title: "TicTacToe",
-    description: "(Note that this project was to show my logical thinking not my design skills as it was done with a very limited time)A customizable and responsive Tic Tac Toe game that lets users define grid size and winning conditions, offering a fresh and challenging twist to the classic game.",
+    description: "A customizable and responsive Tic Tac Toe game that lets users define grid size and winning conditions, offering a fresh and challenging twist to the classic game. (Note: This project was designed to showcase logical thinking rather than design skills, as it was done with very limited time.)",
     tags: ["JavaScript (Vanilla)"],
     image: "/src/assets/tictactoe.png",
     github: "https://github.com/solixman/tictactoe",

@@ -52,11 +52,10 @@ const HeroSection = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="section-title mb-6 min-h-[7rem]"
+                className="section-title mb-6"
               >
-                I'm <TypeWriter />
-                <br />
-                Building Digital Solutions
+                <span className="block h-[1.2em]">I'm <TypeWriter /></span>
+                <span className="block">Building Digital Solutions</span>
               </motion.h2>
 
               {/* Subtitle */}
